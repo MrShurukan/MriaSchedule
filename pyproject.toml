@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mria-scheduler"
+version = "0.1.0"
+description = "CLI tool to aggregate Excel schedules for weekly events"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "openpyxl>=3.1.5",
+  "rapidfuzz>=3.9.7",
+]
+
+[project.scripts]
+mria-scheduler = "mria_scheduler.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mria_scheduler*"]

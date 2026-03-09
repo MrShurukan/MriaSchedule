@@ -1,0 +1,2 @@
+[console_scripts]
+mria-scheduler = mria_scheduler.cli:main
